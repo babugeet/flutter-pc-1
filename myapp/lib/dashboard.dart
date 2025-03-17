@@ -845,42 +845,6 @@ Widget _buildWorkoutProgressCharts(BuildContext context) {
   }
 
 
-  Widget _buildWorkoutsCompleted() {
-    return Card(
-      elevation: 6,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Row(
-              children: [
-                Icon(Icons.fitness_center, color: Colors.blueAccent),
-                SizedBox(width: 10),
-                Text(
-                  'Workouts Completed',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 10),
-            Text('1. Running - 30 mins', style: TextStyle(color: Colors.grey.shade600)),
-            Text('2. Cycling - 45 mins', style: TextStyle(color: Colors.grey.shade600)),
-            Text('3. Swimming - 25 mins', style: TextStyle(color: Colors.grey.shade600)),
-          ],
-        ),
-      ),
-    );
-  }
-
-
 
 
 

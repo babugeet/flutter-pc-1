@@ -313,20 +313,6 @@ List<DietDetail> parseDietData(Map<String, dynamic> data) {
 
 
 
-// Widget _buildWorkoutRow(){
-//         return Row(
-//       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//       children: <Widget>[
-//         Expanded(
-//           child:  _buildWaterIntakeSection(),
-//         ),
-//         SizedBox(width: 20), // Space between water intake and steps counter
-//         Expanded(
-//           child: _buildStepCounterSection(),
-//         ),
-//       ],
-//     );
-// }
   
   Widget _buildWaterStepRow(){
         return Row(
@@ -456,44 +442,171 @@ List<DietDetail> parseDietData(Map<String, dynamic> data) {
       ),
     );
   }
-
-  Widget _buildWorkoutCategory({
-    required String title,
-    required IconData icon,
-    required Color color,
-    required List<WorkoutDetail> workouts,
-  }) {
-    return Card(
-      elevation: 6,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15),
+      String? selectedWorkout; // Store the clicked workout name
+Widget _buildWorkoutCategory({
+  required String title,
+  required IconData icon,
+  required Color color,
+  required List<WorkoutDetail> workouts,
+}) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        title,
+        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: color),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Row(
-              children: <Widget>[
-                Icon(icon, color: color, size: 20),
-                SizedBox(width: 10),
-                Text(
-                  title,
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
+      SizedBox(height: 10),
+      Column(
+        children: workouts.map((workout) {
+          return GestureDetector(
+            onTap: () {
+              String selectedWorkout = workout.name.toLowerCase().replaceAll(" ", "");
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return AlertDialog(
+                    title: Text(workout.name),
+                    content: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Image.asset(
+                          "assets/$selectedWorkout.gif",
+                          height: 200,
+                          width: 200,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            print("GIF NOT FOUND for $selectedWorkout");
+                            return Text("GIF not found for $selectedWorkout");
+                          },
+                        ),
+                      ],
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(context), // Close the dialog
+                        child: Text("Close"),
+                      ),
+                    ],
+                  );
+                },
+              );
+            },
+            child: Card(
+              elevation: 3,
+              margin: EdgeInsets.symmetric(vertical: 5),
+              child: ListTile(
+                title: Text(workout.name,style: TextStyle(color: Colors.black, // Change text color for workout name
+                    fontWeight: FontWeight.bold, // Optional: make it bold
+                    ),
                 ),
-              ],
+                subtitle: Text("Duration: ${workout.duration}"),
+                trailing: Icon(Icons.arrow_forward_ios),
+              ),
             ),
-            SizedBox(height: 10),
-            ...workouts.map((workout) => _buildWorkoutDetail(workout)),
-          ],
-        ),
+          );
+        }).toList(),
       ),
-    );
-  }
+    ],
+  );
+}
+
+  // Widget _buildWorkoutCategory({
+  //   required String title,
+  //   required IconData icon,
+  //   required Color color,
+  //   required List<WorkoutDetail> workouts,
+  // }) {
+  //   return Column(
+  //     crossAxisAlignment: CrossAxisAlignment.start,
+  //     children: [
+  //       Text(
+  //         title,
+  //         style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: color),
+  //       ),
+  //       SizedBox(height: 10),
+  //       Column(
+  //         children: workouts.map((workout) {
+  //           return GestureDetector(
+  //             onTap: () {
+  //               setState(() {
+  //                 selectedWorkout = workout.name.toLowerCase(); // Store the selected workout name
+  //                 selectedWorkout = selectedWorkout?.replaceAll(" ", "").toLowerCase();
+  //                 print("eddeded#####################################");
+  //                 print(selectedWorkout);
+  //               });
+  //             },
+  //             child: Card(
+  //               elevation: 3,
+  //               margin: EdgeInsets.symmetric(vertical: 5),
+  //               child: ListTile(
+  //                 title: Text(workout.name),
+  //                 subtitle: Text("Duration: ${workout.duration}"),
+  //                 trailing: Icon(Icons.arrow_forward_ios),
+  //               ),
+  //             ),
+  //           );
+  //         }).toList(),
+  //       ),
+  //       if (selectedWorkout != null) ...[
+  //         SizedBox(height: 20),
+  //         Text("Workout Preview:", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+  //         SizedBox(height: 10),
+  //         Image.asset(
+  //           "assets/$selectedWorkout.gif",  // Display the GIF from assets
+  //           height: 200,
+  //           width: 200,
+  //           fit: BoxFit.cover,
+  //           errorBuilder: (context, error, stackTrace) {
+  //             print("#################GIF NOT FOUND##############");
+  //             return Text("GIF not found for $selectedWorkout");
+  //           },
+  //         ),
+  //       ],
+  //     ],
+  //   );
+  // }
+
+
+
+
+  // Widget _buildWorkoutCategory({
+  //   required String title,
+  //   required IconData icon,
+  //   required Color color,
+  //   required List<WorkoutDetail> workouts,
+  // }) {
+  //   return Card(
+  //     elevation: 6,
+  //     shape: RoundedRectangleBorder(
+  //       borderRadius: BorderRadius.circular(15),
+  //     ),
+  //     child: Padding(
+  //       padding: const EdgeInsets.all(16.0),
+  //       child: Column(
+  //         crossAxisAlignment: CrossAxisAlignment.start,
+  //         children: <Widget>[
+  //           Row(
+  //             children: <Widget>[
+  //               Icon(icon, color: color, size: 20),
+  //               SizedBox(width: 10),
+  //               Text(
+  //                 title,
+  //                 style: TextStyle(
+  //                   fontSize: 18,
+  //                   fontWeight: FontWeight.bold,
+  //                   color: Colors.black,
+  //                 ),
+  //               ),
+  //             ],
+  //           ),
+  //           SizedBox(height: 10),
+  //           ...workouts.map((workout) => _buildWorkoutDetail(workout)),
+  //         ],
+  //       ),
+  //     ),
+  //   );
+  // }
     Widget _buildDietDetail(DietDetail diet) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),

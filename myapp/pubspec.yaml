@@ -90,6 +90,16 @@ flutter:
     - assets/pexels-823sl-2294361.jpg
     - assets/pngegg.png
     - assets/user_profile.jpg
+    - assets/benchpress.gif
+    - assets/jumpingjacks.gif
+    - assets/legpress.gif
+    - assets/pullups.gif
+    - assets/pushups.gif
+    - assets/running.gif
+    - assets/squats.gif
+    - assets/walking.gif
+    - assets/cycling.gif
+    - assets/weightlift.gif
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

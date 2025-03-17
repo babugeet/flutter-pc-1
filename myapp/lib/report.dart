@@ -410,9 +410,9 @@ String formatSelectedDay(DateTime date) {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Fitness Tracker'),
-      ),
+      // appBar: AppBar(
+      //   title: const Text('Fitness Tracker'),
+      // ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
