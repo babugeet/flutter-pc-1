@@ -4,12 +4,16 @@ import 'package:myapp/authservice.dart';
 import 'package:myapp/dashboard.dart';
 import 'package:myapp/loginpage.dart';
 import 'package:myapp/report.dart';
+import 'package:myapp/googlemap.dart';
 import 'package:get/get.dart';
 import 'package:myapp/stats.dart';
 import 'firebase_options.dart';
 import 'package:myapp/signinpage.dart';
 import 'package:myapp/workoutscreen.dart';
 import 'firestore_service.dart';
+import 'package:flutter/foundation.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:google_maps_flutter_web/google_maps_flutter_web.dart';
 
 
 // void main() {
@@ -47,15 +51,20 @@ class MyApp extends StatelessWidget {
             } else {
               // If not signed in, navigate to the signup page
               return LoginPage();
+              // return NearbyGymsScreen();
             }
           },
         ),
-        '/login': (context) => LoginPage(),
+        // '/login': (context) => LoginPage(),
+        // '/login': (context) => NearbyGymsScreen(),
         '/signup': (context) => SignupPage(),
         '/dashboard': (context) => ProtectedRoute(child: DashboardPage()),
         '/profile': (context) => ProtectedRoute(child: StatsScreen()),
         '/workout': (context) => ProtectedRoute(child: WorkoutsScreen()),
         '/reports': (context) => ProtectedRoute(child: ReportPage()),
+        // '/gyms': (context) => ProtectedRoute(child: GymScreen()),
+        // '/gyms': (context) => ProtectedRoute(child: NearbyGymsScreen()),
+
       },
     );
   }

@@ -104,7 +104,7 @@ final FirestoreService _firestoreService = FirestoreService();
         Map<String, dynamic> responseData = jsonDecode(response.body);
         String token = responseData['token'];
         final AuthService _authService = AuthService();
-        _authService.saveToken(responseData['token']);
+        // _authService.saveToken(responseData['token']); To be uncommented
         // String username1 = '$username'; 
         // Successful login
         // Save the cookies returned in the response

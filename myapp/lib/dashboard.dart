@@ -9,7 +9,7 @@ import 'package:myapp/report.dart';
 import 'package:myapp/stats.dart';
 import 'global.dart';
 import 'firestore_service.dart';
-
+import 'package:myapp/googlemap.dart';
 import 'package:myapp/workoutscreen.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -642,7 +642,11 @@ final geminibody= jsonEncode({"system_instruction": {
           ? DashboardScreen(username: _username, age: _age, weight: _weight, waterProgress: _waterProgress, waterConsumed: _waterConsumed, stepProgress: _stepProgress,stepConsumed: _stepsWalked,workoutProgressData: _workoutProgressData,) 
          : _selectedIndex == 1 
             ? WorkoutsScreen() 
-            : _selectedIndex == 2
+            // : _selectedIndex == 2
+            // ? GymScreen()
+            // ? NearbyGymsScreen()
+
+            : _selectedIndex == 3
             ? StatsScreen()
             : ReportPage(),
         ],
@@ -656,6 +660,10 @@ final geminibody= jsonEncode({"system_instruction": {
           BottomNavigationBarItem(
             icon: Icon(Icons.fitness_center),
             label: 'Workouts',
+          ),
+                    BottomNavigationBarItem(
+            icon: Icon(Icons.place),
+            label: 'Gyms',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
