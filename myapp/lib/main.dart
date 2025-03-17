@@ -4,6 +4,7 @@ import 'package:myapp/authservice.dart';
 import 'package:myapp/dashboard.dart';
 import 'package:myapp/loginpage.dart';
 import 'package:myapp/report.dart';
+import 'package:myapp/googlemap.dart';
 import 'package:get/get.dart';
 import 'package:myapp/stats.dart';
 import 'firebase_options.dart';
@@ -54,6 +55,7 @@ class MyApp extends StatelessWidget {
         '/signup': (context) => SignupPage(),
         '/dashboard': (context) => ProtectedRoute(child: DashboardPage()),
         '/profile': (context) => ProtectedRoute(child: StatsScreen()),
+         '/gymmap': (context) => ProtectedRoute(child: NearbyGymsScreen()),
         '/workout': (context) => ProtectedRoute(child: WorkoutsScreen()),
         '/reports': (context) => ProtectedRoute(child: ReportPage()),
       },
