@@ -10,7 +10,7 @@ import 'package:myapp/stats.dart';
 import 'package:myapp/googlemap.dart';
 import 'global.dart';
 import 'firestore_service.dart';
-
+import 'package:myapp/workoutlibrary.dart';
 import 'package:myapp/workoutscreen.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -608,7 +608,7 @@ final geminibody= jsonEncode({"system_instruction": {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Fitness Tracker',
+          'FitBay',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -647,7 +647,10 @@ final geminibody= jsonEncode({"system_instruction": {
             ? NearbyGymsScreen() 
             : _selectedIndex == 3
             ? StatsScreen()
-            : ReportPage(),
+            : _selectedIndex == 4
+            ? ReportPage()
+            : WorkoutGallery()
+            
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -658,7 +661,7 @@ final geminibody= jsonEncode({"system_instruction": {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.fitness_center),
-            label: 'Workouts',
+            label: 'Target',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.location_pin),
@@ -671,6 +674,10 @@ final geminibody= jsonEncode({"system_instruction": {
           BottomNavigationBarItem(
             icon: Icon(Icons.summarize_sharp),
             label: 'Reports',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.video_library),
+            label: 'Workouts',
           ),
         ],
         currentIndex: _selectedIndex,

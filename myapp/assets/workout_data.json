@@ -1,0 +1,88 @@
+{
+  "workouts": {
+      "BACK": [
+          "Barbell-Bent-Over-Row.gif",
+          "Barbell-Deadlift.gif",
+          "Bent-Over-Dumbbell-Row.gif",
+          "Cable-Rear-Pulldown.gif",
+          "Front-Pulldown.gif",
+          "Lat-Pulldown.gif",
+          "Lever-T-bar-Row.gif",
+          "Muscle-up-vertical-bar.gif",
+          "One-arm-Cable-Row.gif",
+          "Seated-Cable-Row.gif"
+      ],
+      "BICEPS": [
+          "Barbell-Curl.gif",
+          "Concentration-Curl.gif",
+          "Dumbbell-Curl.gif",
+          "Hammer-Curl.gif",
+          "Lever-Preacher-Curl.gif",
+          "One-Arm-Cable-Curl.gif",
+          "Seated-Incline-Dumbbell-Curl.gif",
+          "Seated-Zottman-Curl.gif",
+          "Z-Bar-Preacher-Curl.gif",
+          "zottman-curl.gif"
+      ],
+      "CARDIO": [
+          "Battle-Rope.gif",
+          "Depth-Jump-to-Hurdle-Hop.gif",
+          "Mountain-climber.gif",
+          "Navy-Seal-Burpee.gif",
+          "Stationary-Bike-Run.gif",
+          "The-Box-Jump.gif",
+          "Walking.gif",
+          "power-lunge.gif",
+          "shadow-boxing-workout.gif",
+          "sprint.gif"
+      ],
+      "CHEST": [
+          "Barbell-Bench-Press.gif",
+          "Chest-Dips.gif",
+          "Dumbbell-Pullover.gif",
+          "Dumbbell-Upward-Fly.gif",
+          "High-Cable-Crossover.gif",
+          "Incline-Barbell-Bench-Press.gif",
+          "Incline-Chest-Fly-Machine.gif",
+          "Lever-Incline-Chest-Press.gif",
+          "Low-Cable-Crossover.gif",
+          "Pec-Deck-Fly.gif"
+      ],
+      "LEG": [
+          "BARBELL-SQUAT.gif",
+          "Barbell-Sumo-Deadlift.gif",
+          "Deadlift.gif",
+          "Dumbbell-Goblet-Squat.gif",
+          "High-Knee-Lunge-on-Bosu-Ball.gif",
+          "Leg-Press.gif",
+          "Sumo-Plie-Dumbbell-Squat.gif",
+          "dumbbell-cossack-squat.gif",
+          "dumbbell-lunges.gif",
+          "smith-machine-squat.gif"
+      ],
+      "SHOULDER": [
+          "45-Degree-Incline-Row.gif",
+          "Barbell-Shoulder-Press.gif",
+          "Dumbbell-4-Ways-Lateral-Raise.gif",
+          "Dumbbell-Chest-Supported-Lateral-Raises.gif",
+          "Dumbbell-Lateral-Raise.gif",
+          "Dumbbell-Push-Press.gif",
+          "Dumbbell-Shoulder-Press.gif",
+          "Lever-Shoulder-Press.gif",
+          "Smith-Machine-Behind-Neck-Press.gif",
+          "Two-Arm-Cable-Front-Raise.gif"
+      ],
+      "TRICEPS": [
+          "Barbell-JM-Press.gif",
+          "Dumbbell-Kickback.gif",
+          "Dumbbell-Skull-Crusher.gif",
+          "Kneeling-Cable-Extension.gif",
+          "One-Arm-Lying-Triceps-Extension.gif",
+          "One-Arm-Reverse-Push-Down.gif",
+          "One-arm-triceps-pushdown.gif",
+          "Pushdown.gif",
+          "Seated-Dumbbell-Triceps-Extension.gif",
+          "Triceps-Dips.gif"
+      ]
+  }
+}

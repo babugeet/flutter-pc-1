@@ -1,0 +1,53 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURlVENDQW1HZ0F3SUJBZ0lSQU5tc01HMzQvVHptVG8xSmRwb3dna1V3RFFZSktvWklodmNOQVFFTEJRQXcKVmpFUU1BNEdBMVVFQ2hNSFltRnpkR2x2YmpFUU1BNEdBMVVFQXhNSFltRnpkR2x2YmpFd01DNEdBMVVFQlJNbgpNamc1TXpNMk5UTXlOREV6TlRnek9EVXlNelkxTmpneU9UY3pNRFV4TURnMU5ESXpNVGN6TUI0WERUSTBNRGN4Ck1qQTVORGt5TUZvWERUTTBNRGN4TURBNU5Ea3lNRm93VmpFUU1BNEdBMVVFQ2hNSFltRnpkR2x2YmpFUU1BNEcKQTFVRUF4TUhZbUZ6ZEdsdmJqRXdNQzRHQTFVRUJSTW5Namc1TXpNMk5UTXlOREV6TlRnek9EVXlNelkxTmpneQpPVGN6TURVeE1EZzFOREl6TVRjek1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBCnpFUDZHZlcySHBWSW10enYrNVdjZ2FEaWM1UVRxZ0NJUUhML2tBTjg4WGZidzhETUdTT2d4RW1HWUpZaGVWbHUKaGNVOHl4SGpsSzAyTUFZTURzNC9jZ3FyREZObHFLeXJncFVsNEdybCtycWdaNFNEbVdSVXdualRFSVlyd2NSNgppZ1d0Qm4ySjVmUmdaSFU2WWVXQzNLbkp5dll4cmVIQ2lrOFM5dVVwLzFWd0s1RGgzN3BIclpnSDFHbmU1QlVpCmc2N2xtM2QxN1NwcWRJRjgraXNWTCtuWDBERjh1SHFrTWU0SlVlTDZDeS9QLzNKcmZha3VneGduSjQya3NRME4KQUgwc2x6SDA4SUkxODVENXRDUHN1WXdEYWowM3o4TmMxWmY5RXBQcW9FSEdha2xtWlI2djhYWHp6N1A5LzBNegpNUUIrcVhETTEva2p4bGFoZUt5VDlRSURBUUFCbzBJd1FEQU9CZ05WSFE4QkFmOEVCQU1DQWFZd0R3WURWUjBUCkFRSC9CQVV3QXdFQi96QWRCZ05WSFE0RUZnUVV3eDV3b0hoNHcwdWRXNDRKVFBDY2U1NXhmMVF3RFFZSktvWkkKaHZjTkFRRUxCUUFEZ2dFQkFDRks4T3pGeGtLbWxYek4xWmxZN3Y2NEFZK016TDVST0NyMTUzaW55aGJqM2oyRAo2c3E4NStHOGRabFBTSVM3dytZSmNXN3RocHJRTTYwaFNIbCtkTUVFNjA2U0oxWWw1S3FsVVBaU09Mck53SHlMClo3bGYxWjVZQlNQVGx3elF5a0FsYndNaVNHRFN3akUrKy9tcjZGeUhGZTlIbzBOSldsZnpJMkEyMm0rTEVmTGUKK0pwZFRtNGV0cEJpSW1oNEJjMThjQnJ6MC9nTkVQcWJabnl4eEtVb3ptUEw1YnpibTRONUlLQVBGeGNaTkFWVQo4Z3hLQlBMbGV4RnFjOS9GNDdtU0crb1hnTkdTQm84Nk9mVVhEWHdPS2JFNVdLSEtsOHVqZk1KNTlzYnQ0RXhNCit2ODdHekZraFpaWFNQbjYxMkxWSENJbUdSUUkxTHZzR2dDYlgrbz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://bastion-dalh.ibm.us-east.private.platform.dev.saas.ibm.com:443
+    tls-server-name: kube-teleport-proxy-alpn.bastion-dalh.ibm.us-east.private.platform.dev.saas.ibm.com
+  name: bastion
+contexts:
+- context:
+    cluster: bastion
+    extensions:
+    - extension: lh-wxd-dev-br-sao-cp-roks14
+      name: teleport.kube.name
+    user: bastion-lh-wxd-dev-br-sao-cp-roks14
+  name: bastion-lh-wxd-dev-br-sao-cp-roks14
+- context:
+    cluster: bastion
+    extensions:
+    - extension: lh-wxd-dev-br-sao-db-roks15
+      name: teleport.kube.name
+    user: bastion-lh-wxd-dev-br-sao-db-roks15
+  name: bastion-lh-wxd-dev-br-sao-db-roks15
+current-context: bastion-lh-wxd-dev-br-sao-db-roks15
+kind: Config
+preferences: {}
+users:
+- name: bastion-lh-wxd-dev-br-sao-cp-roks14
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - kube
+      - credentials
+      - --kube-cluster=lh-wxd-dev-br-sao-cp-roks14
+      - --teleport-cluster=bastion
+      - --proxy=bastion-dalh.ibm.us-east.private.platform.dev.saas.ibm.com:443
+      command: /usr/local/bin/tsh
+      env: null
+      interactiveMode: IfAvailable
+      provideClusterInfo: false
+- name: bastion-lh-wxd-dev-br-sao-db-roks15
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - kube
+      - credentials
+      - --kube-cluster=lh-wxd-dev-br-sao-db-roks15
+      - --teleport-cluster=bastion
+      - --proxy=bastion-dalh.ibm.us-east.private.platform.dev.saas.ibm.com:443
+      command: /usr/local/bin/tsh
+      env: null
+      provideClusterInfo: false

@@ -56,6 +56,7 @@ dependencies:
   table_calendar: ^3.1.2
   get: ^4.7.2
   firebase_core_web: ^2.21.1
+  url_launcher: ^6.3.1
 
 
 dev_dependencies:
@@ -85,6 +86,7 @@ flutter:
     - assets/pexels-823sl-2294361.jpg
     - assets/background_login.jpg
     - assets/background.jpg
+    - assets/wallp.jpeg
     - assets/fitnessbackground_signup.jpg
     - assets/pexels-pixabay-163351.jpg
     - assets/pexels-823sl-2294361.jpg
@@ -99,7 +101,80 @@ flutter:
     - assets/squats.gif
     - assets/walking.gif
     - assets/cycling.gif
+    - assets/login1.jpeg
+    - assets/signup1.jpeg
     - assets/weightlift.gif
+    - assets/workouts/BACK/Barbell-Bent-Over-Row.gif
+    - assets/workouts/BACK/Barbell-Deadlift.gif
+    - assets/workouts/BACK/Bent-Over-Dumbbell-Row.gif
+    - assets/workouts/BACK/Cable-Rear-Pulldown.gif
+    - assets/workouts/BACK/Front-Pulldown.gif
+    - assets/workouts/BACK/Lat-Pulldown.gif
+    - assets/workouts/BACK/Lever-T-bar-Row.gif
+    - assets/workouts/BACK/Muscle-up-vertical-bar.gif
+    - assets/workouts/BACK/One-arm-Cable-Row.gif
+    - assets/workouts/BACK/Seated-Cable-Row.gif
+    - assets/workouts/BICEPS/Barbell-Curl.gif
+    - assets/workouts/BICEPS/Concentration-Curl.gif
+    - assets/workouts/BICEPS/Dumbbell-Curl.gif
+    - assets/workouts/BICEPS/Hammer-Curl.gif
+    - assets/workouts/BICEPS/Lever-Preacher-Curl.gif
+    - assets/workouts/BICEPS/One-Arm-Cable-Curl.gif
+    - assets/workouts/BICEPS/Seated-Incline-Dumbbell-Curl.gif
+    - assets/workouts/BICEPS/Seated-Zottman-Curl.gif
+    - assets/workouts/BICEPS/Z-Bar-Preacher-Curl.gif
+    - assets/workouts/BICEPS/zottman-curl.gif
+    - assets/workouts/CARDIO/Battle-Rope.gif
+    - assets/workouts/CARDIO/Depth-Jump-to-Hurdle-Hop.gif
+    - assets/workouts/CARDIO/Mountain-climber.gif
+    - assets/workouts/CARDIO/Navy-Seal-Burpee.gif
+    - assets/workouts/CARDIO/Stationary-Bike-Run.gif
+    - assets/workouts/CARDIO/The-Box-Jump.gif
+    - assets/workouts/CARDIO/Walking.gif
+    - assets/workouts/CARDIO/power-lunge.gif
+    - assets/workouts/CARDIO/shadow-boxing-workout.gif
+    - assets/workouts/CARDIO/sprint.gif
+    - assets/workouts/CHEST/Barbell-Bench-Press.gif
+    - assets/workouts/CHEST/Chest-Dips.gif
+    - assets/workouts/CHEST/Dumbbell-Pullover.gif
+    - assets/workouts/CHEST/Dumbbell-Upward-Fly.gif
+    - assets/workouts/CHEST/High-Cable-Crossover.gif
+    - assets/workouts/CHEST/Incline-Barbell-Bench-Press.gif
+    - assets/workouts/CHEST/Incline-Chest-Fly-Machine.gif
+    - assets/workouts/CHEST/Lever-Incline-Chest-Press.gif
+    - assets/workouts/CHEST/Low-Cable-Crossover.gif
+    - assets/workouts/CHEST/Pec-Deck-Fly.gif
+    - assets/workouts/LEG/BARBELL-SQUAT.gif
+    - assets/workouts/LEG/Barbell-Sumo-Deadlift.gif
+    - assets/workouts/LEG/Deadlift.gif
+    - assets/workouts/LEG/Dumbbell-Goblet-Squat.gif
+    - assets/workouts/LEG/High-Knee-Lunge-on-Bosu-Ball.gif
+    - assets/workouts/LEG/Leg-Press.gif
+    - assets/workouts/LEG/Sumo-Plie-Dumbbell-Squat.gif
+    - assets/workouts/LEG/dumbbell-cossack-squat.gif
+    - assets/workouts/LEG/dumbbell-lunges.gif
+    - assets/workouts/LEG/smith-machine-squat.gif
+    - assets/workouts/SHOULDER/45-Degree-Incline-Row.gif
+    - assets/workouts/SHOULDER/Barbell-Shoulder-Press.gif
+    - assets/workouts/SHOULDER/Dumbbell-4-Ways-Lateral-Raise.gif
+    - assets/workouts/SHOULDER/Dumbbell-Chest-Supported-Lateral-Raises.gif
+    - assets/workouts/SHOULDER/Dumbbell-Lateral-Raise.gif
+    - assets/workouts/SHOULDER/Dumbbell-Push-Press.gif
+    - assets/workouts/SHOULDER/Dumbbell-Shoulder-Press.gif
+    - assets/workouts/SHOULDER/Lever-Shoulder-Press.gif
+    - assets/workouts/SHOULDER/Smith-Machine-Behind-Neck-Press.gif
+    - assets/workouts/SHOULDER/Two-Arm-Cable-Front-Raise.gif
+    - assets/workouts/TRICEPS/Barbell-JM-Press.gif
+    - assets/workouts/TRICEPS/Dumbbell-Kickback.gif
+    - assets/workouts/TRICEPS/Dumbbell-Skull-Crusher.gif
+    - assets/workouts/TRICEPS/Kneeling-Cable-Extension.gif
+    - assets/workouts/TRICEPS/One-Arm-Lying-Triceps-Extension.gif
+    - assets/workouts/TRICEPS/One-Arm-Reverse-Push-Down.gif
+    - assets/workouts/TRICEPS/One-arm-triceps-pushdown.gif
+    - assets/workouts/TRICEPS/Pushdown.gif
+    - assets/workouts/TRICEPS/Seated-Dumbbell-Triceps-Extension.gif
+    - assets/workouts/TRICEPS/Triceps-Dips.gif
+    - assets/workout_data.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

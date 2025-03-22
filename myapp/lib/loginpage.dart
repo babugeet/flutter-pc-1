@@ -225,7 +225,7 @@ final FirestoreService _firestoreService = FirestoreService();
       body: Container(
   decoration: BoxDecoration(
     image: DecorationImage(
-      image: AssetImage('assets/pexels-823sl-2294361.jpg'),
+      image: AssetImage('assets/login1.jpeg'),
       fit: BoxFit.cover, // Adjust the image to cover the entire background
     ),
   ),
@@ -242,7 +242,8 @@ final FirestoreService _firestoreService = FirestoreService();
             style: TextStyle(color: Colors.white),
             decoration: InputDecoration(
               filled: true,
-              fillColor: Colors.white24,
+              // fillColor: Colors.white24,
+              fillColor: Colors.black87,
               hintText: 'Username',
               hintStyle: TextStyle(color: Colors.white70),
               prefixIcon: Icon(Icons.person, color: Colors.white70),
@@ -259,7 +260,7 @@ final FirestoreService _firestoreService = FirestoreService();
             style: TextStyle(color: Colors.white),
             decoration: InputDecoration(
               filled: true,
-              fillColor: Colors.white24,
+              fillColor: Colors.black87,
               hintText: 'Password',
               hintStyle: TextStyle(color: Colors.white70),
               prefixIcon: Icon(Icons.lock, color: Colors.white70),
@@ -269,19 +270,20 @@ final FirestoreService _firestoreService = FirestoreService();
               ),
             ),
           ),
-          SizedBox(height: 30),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.white24,
-              padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30),
-              ),
-            ),
-            onPressed: _login,
-            child: Text('Login', style: TextStyle(color: Colors.white, fontSize: 18)),
-          ),
-          SizedBox(height: 20),
+        SizedBox(height: 30),
+ElevatedButton(
+  style: ElevatedButton.styleFrom(
+    backgroundColor: Color.fromARGB(255, 247, 128, 0), // Fully opaque orange
+    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(30),
+    ),
+  ),
+  onPressed: _login,
+  child: Text('Login', style: TextStyle(color: Colors.white, fontSize: 18)),
+),
+SizedBox(height: 20),
+
           TextButton(
             onPressed: () {
               Navigator.pushNamed(context, '/signup');

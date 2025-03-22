@@ -4,7 +4,7 @@
 
     <application
 
-        android:label="myapp"
+        android:label="FitBay"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

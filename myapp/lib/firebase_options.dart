@@ -9,11 +9,11 @@ import 'package:firebase_core/firebase_core.dart';
 // );
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = FirebaseOptions(
-  apiKey: "AIzaSyBRt6iqsd2LrmegRRpyuCdlHIb7VDH-D9w",
-  authDomain: "fitness-tracker-007.firebaseapp.com",
-  projectId: "fitness-tracker-007",
-  storageBucket: "fitness-tracker-007.firebasestorage.app",
-  messagingSenderId: "616220277206",
-  appId: "1:616220277206:web:96f83eb2e35814b6b90c77",
-  measurementId: "G-3R94341991"
+  apiKey: "AIzaSyC1Rc0uMc7iAjYUq4OA-k5G1HA-PbeEdIA",
+  authDomain: "fittness-098.firebaseapp.com",
+  projectId: "fittness-098",
+  storageBucket: "fittness-098.firebasestorage.app",
+  messagingSenderId: "361779741412",
+  appId: "1:361779741412:web:8bc7b1ac5d9fdc7a8aa2f1",
+  measurementId: "G-6868YDW99S"
 );

@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 import 'package:myapp/stats.dart';
 import 'firebase_options.dart';
 import 'package:myapp/signinpage.dart';
+import 'package:myapp/workoutlibrary.dart';
 import 'package:myapp/workoutscreen.dart';
 import 'firestore_service.dart';
 
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Fitness Tracker',
+      title: 'FitBay',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -58,6 +59,7 @@ class MyApp extends StatelessWidget {
          '/gymmap': (context) => ProtectedRoute(child: NearbyGymsScreen()),
         '/workout': (context) => ProtectedRoute(child: WorkoutsScreen()),
         '/reports': (context) => ProtectedRoute(child: ReportPage()),
+        '/library': (context) => ProtectedRoute(child: WorkoutGallery()),
       },
     );
   }

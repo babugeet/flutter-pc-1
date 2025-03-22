@@ -500,7 +500,7 @@ Widget _buildWorkoutCategory({
                     fontWeight: FontWeight.bold, // Optional: make it bold
                     ),
                 ),
-                subtitle: Text("Duration: ${workout.duration}"),
+                subtitle: Text("Target: ${workout.duration}"),
                 trailing: Icon(Icons.arrow_forward_ios),
               ),
             ),
@@ -541,7 +541,7 @@ Widget _buildWorkoutCategory({
   //               margin: EdgeInsets.symmetric(vertical: 5),
   //               child: ListTile(
   //                 title: Text(workout.name),
-  //                 subtitle: Text("Duration: ${workout.duration}"),
+  //                 subtitle: Text("Target: ${workout.duration}"),
   //                 trailing: Icon(Icons.arrow_forward_ios),
   //               ),
   //             ),
