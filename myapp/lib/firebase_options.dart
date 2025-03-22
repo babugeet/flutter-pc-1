@@ -9,7 +9,7 @@ import 'package:firebase_core/firebase_core.dart';
 // );
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = FirebaseOptions(
-  apiKey: "AIzaSyC1Rc0uMc7iAjYUq4OA-k5G1HA-PbeEdIA",
+  apiKey: "AIzaSyC1Rc0uMc7iAjYUq4OA-k5G1HA",
   authDomain: "fittness-098.firebaseapp.com",
   projectId: "fittness-098",
   storageBucket: "fittness-098.firebasestorage.app",

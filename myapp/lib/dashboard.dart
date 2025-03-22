@@ -621,7 +621,7 @@ final geminibody= jsonEncode({"system_instruction": {
           IconButton(
             icon: Icon(Icons.logout),
             onPressed: () async {
-              await _authService.logout(); // Call the logout method
+              await _authService.logout(context); // Call the logout method
               Navigator.of(context).pushReplacementNamed('/login'); // Navigate to login page
             },
           ),

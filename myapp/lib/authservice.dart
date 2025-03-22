@@ -23,6 +23,7 @@
 
 
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter/material.dart';
 
 class AuthService {
   final String _tokenKey = 'flutter.token1';
@@ -33,9 +34,13 @@ class AuthService {
     return token != null;
   }
 
-  Future<void> logout() async {
+  Future<void> logout( context) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.remove(_tokenKey);
+        if (context.mounted) {
+      Navigator.pushNamedAndRemoveUntil(context, '/splash', (route) => false);
+    }
+    // Navigator.pushReplacementNamed(context, '/splash'); 
   }
 
   Future<bool> isKeyExists(String key) async {

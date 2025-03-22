@@ -6,6 +6,7 @@ import 'package:myapp/loginpage.dart';
 import 'package:myapp/report.dart';
 import 'package:myapp/googlemap.dart';
 import 'package:get/get.dart';
+import 'package:myapp/splashscreen.dart';
 import 'package:myapp/stats.dart';
 import 'firebase_options.dart';
 import 'package:myapp/signinpage.dart';
@@ -33,37 +34,79 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'FitBay',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      initialRoute: '/',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      initialRoute: '/splash',
       routes: {
-        '/': (context) => FutureBuilder<bool>(
-          future: _authService.isUserSignedIn(), // Check if user is signed in
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(child: CircularProgressIndicator());
-            } else if (snapshot.hasData && snapshot.data == true) {
-              // If user is signed in, navigate to the dashboard
-              return DashboardPage();
-            } else {
-              // If not signed in, navigate to the signup page
-              return LoginPage();
-            }
-          },
-        ),
-        '/login': (context) => LoginPage(),
-        '/signup': (context) => SignupPage(),
+        // '/': (context) => FutureBuilder<bool>(
+        //       future: _authService.isUserSignedIn(), // Check if user is signed in
+        //       builder: (context, snapshot) {
+        //         if (snapshot.connectionState == ConnectionState.waiting) {
+        //           return Center(child: CircularProgressIndicator());
+        //         } else if (snapshot.hasData && snapshot.data == true) {
+        //           return SplashScreen(); // Show splash screen after login
+        //         } else {
+        //           return LoginPage(); // Show login page if not logged in
+        //         }
+        //       },
+        //     ),
+        '/splash': (context) => SplashScreen(), // Add this route
         '/dashboard': (context) => ProtectedRoute(child: DashboardPage()),
         '/profile': (context) => ProtectedRoute(child: StatsScreen()),
-         '/gymmap': (context) => ProtectedRoute(child: NearbyGymsScreen()),
+        '/gymmap': (context) => ProtectedRoute(child: NearbyGymsScreen()),
         '/workout': (context) => ProtectedRoute(child: WorkoutsScreen()),
         '/reports': (context) => ProtectedRoute(child: ReportPage()),
         '/library': (context) => ProtectedRoute(child: WorkoutGallery()),
+        '/login': (context) => LoginPage(),
+        '/signup': (context) => SignupPage(),
       },
     );
   }
 }
+
+
+
+// class MyApp extends StatelessWidget {
+//   final AuthService _authService = AuthService();
+
+//   MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: SplashScreen(),
+//       title: 'FitBay',
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//       ),
+//       initialRoute: '/',
+//       routes: {
+//         '/': (context) => FutureBuilder<bool>(
+//           future: _authService.isUserSignedIn(), // Check if user is signed in
+//           builder: (context, snapshot) {
+//             if (snapshot.connectionState == ConnectionState.waiting) {
+//               return Center(child: CircularProgressIndicator());
+//             } else if (snapshot.hasData && snapshot.data == true) {
+//               // If user is signed in, navigate to the dashboard
+//               return DashboardPage();
+//             } else {
+//               // If not signed in, navigate to the signup page
+//               return LoginPage();
+//             }
+//           },
+//         ),
+//         '/login': (context) => LoginPage(),
+//         '/signup': (context) => SignupPage(),
+//         '/dashboard': (context) => ProtectedRoute(child: DashboardPage()),
+//         '/profile': (context) => ProtectedRoute(child: StatsScreen()),
+//          '/gymmap': (context) => ProtectedRoute(child: NearbyGymsScreen()),
+//         '/workout': (context) => ProtectedRoute(child: WorkoutsScreen()),
+//         '/reports': (context) => ProtectedRoute(child: ReportPage()),
+//         '/library': (context) => ProtectedRoute(child: WorkoutGallery()),
+//       },
+//     );
+//   }
+// }
 
 
 class ProtectedRoute extends StatelessWidget {

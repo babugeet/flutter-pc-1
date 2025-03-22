@@ -57,6 +57,7 @@ dependencies:
   get: ^4.7.2
   firebase_core_web: ^2.21.1
   url_launcher: ^6.3.1
+  lottie: ^3.3.1
 
 
 dev_dependencies:
@@ -85,6 +86,7 @@ flutter:
   assets:
     - assets/pexels-823sl-2294361.jpg
     - assets/background_login.jpg
+    - assets/Animation-1742662628760.json
     - assets/background.jpg
     - assets/wallp.jpeg
     - assets/fitnessbackground_signup.jpg

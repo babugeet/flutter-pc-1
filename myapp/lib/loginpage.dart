@@ -78,24 +78,7 @@ final FirestoreService _firestoreService = FirestoreService();
 
     //       Response response = await dio.post(
     //   '/login',
-    //   data: {
-    //     'username': 'your_username',
-    //     'password': 'your_password',
-    //   },
-    //   options: Options(
-    //     followRedirects: false,
-    //     validateStatus: (status) {
-    //       return status! < 500; // Allow status code < 500
-    //     },
-    //         headers: {
-    //     'Content-Type': 'application/json',
-    //     'Accept': 'application/json',
-    //   },
-    //   ),
-    // );
-  //    var cookies = await cookieJar.loadForRequest(Uri.parse('http://localhost:8080/login'));
-  // print(cookies); // This will show the Set-Cookie header
-       // Print response details for debugging
+  
     print('Response status: ${response.statusCode}');
     print('Response headers: ${response.headers}');
     // print('Response body: ${response.body}');
@@ -106,26 +89,21 @@ final FirestoreService _firestoreService = FirestoreService();
         final AuthService _authService = AuthService();
         _authService.saveToken(responseData['token']);
         // String username1 = '$username'; 
-        // Successful login
-        // Save the cookies returned in the response
-        //  String? setCookieHeader = response.headers['set-cookie'];
 
-        // Define a manual cookie value if needed
-
-
-        // String manualCookie = 'token1=${response.body},userna1me=$username';
-
-
-        // Store the cookie in SharedPreferences
         final prefs = await SharedPreferences.getInstance();
         // var setCookieHeader;
         await prefs.setString('token1', token);
   await prefs.setString('userna1me', username);
         // await prefs.setString('token1', setCookieHeader ?? manualCookie);
         // print('Cookie stored: ${setCookieHeader ?? manualCookie}');
-
+Navigator.pushReplacementNamed(context, '/splash');
         // Navigate to the dashboard
+           Future.delayed(Duration(seconds: 3), () {
+            if (mounted) {
         Navigator.pushReplacementNamed(context, '/dashboard');
+            }
+      });
+        // Navigator.pushReplacementNamed(context, '/dashboard');
         
       } else {
         // Show error if the login fails
@@ -150,78 +128,7 @@ final FirestoreService _firestoreService = FirestoreService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // body: Container(
-      //   decoration: BoxDecoration(
-      //     gradient: LinearGradient(
-      //       colors: [Colors.blueGrey, Colors.grey],
-      //       begin: Alignment.topCenter,
-      //       end: Alignment.bottomCenter,
-      //     ),
-      //   ),
-      //   child: Center(
-      //     child: Padding(
-      //       padding: const EdgeInsets.all(16.0),
-      //       child: Column(
-      //         mainAxisAlignment: MainAxisAlignment.center,
-      //         children: <Widget>[
-      //           Icon(Icons.fitness_center, color: Colors.white, size: 100),
-      //           SizedBox(height: 30),
-      //           TextField(
-      //             controller: _usernameController,
-      //             style: TextStyle(color: Colors.white),
-      //             decoration: InputDecoration(
-      //               filled: true,
-      //               fillColor: Colors.white24,
-      //               hintText: 'Username',
-      //               hintStyle: TextStyle(color: Colors.white70),
-      //               prefixIcon: Icon(Icons.person, color: Colors.white70),
-      //               border: OutlineInputBorder(
-      //                 borderRadius: BorderRadius.circular(30),
-      //                 borderSide: BorderSide.none,
-      //               ),
-      //             ),
-      //           ),
-      //           SizedBox(height: 20),
-      //           TextField(
-      //             controller: _passwordController,
-      //             obscureText: true,
-      //             style: TextStyle(color: Colors.white),
-      //             decoration: InputDecoration(
-      //               filled: true,
-      //               fillColor: Colors.white24,
-      //               hintText: 'Password',
-      //               hintStyle: TextStyle(color: Colors.white70),
-      //               prefixIcon: Icon(Icons.lock, color: Colors.white70),
-      //               border: OutlineInputBorder(
-      //                 borderRadius: BorderRadius.circular(30),
-      //                 borderSide: BorderSide.none,
-      //               ),
-      //             ),
-      //           ),
-      //           SizedBox(height: 30),
-      //           ElevatedButton(
-      //             style: ElevatedButton.styleFrom(
-      //               backgroundColor: Colors.white24,
-      //               padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-      //               shape: RoundedRectangleBorder(
-      //                 borderRadius: BorderRadius.circular(30),
-      //               ),
-      //             ),
-      //             onPressed: _login,
-      //             child: Text('Login', style: TextStyle(color: Colors.white, fontSize: 18)),
-      //           ),
-      //           SizedBox(height: 20),
-      //           TextButton(
-      //             onPressed: () {
-      //               Navigator.pushNamed(context, '/signup');
-      //             },
-      //             child: Text('Don\'t have an account? Sign up', style: TextStyle(color: Colors.white70, fontSize: 16)),
-      //           ),
-      //         ],
-      //       ),
-      //     ),
-      //   ),
-      // ),
+
       body: Container(
   decoration: BoxDecoration(
     image: DecorationImage(
