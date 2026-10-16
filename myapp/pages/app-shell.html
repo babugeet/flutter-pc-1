@@ -1,0 +1,62 @@
+<main id="app-screen" class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="#dashboard" aria-label="Formwell dashboard"
+      ><span class="brand-mark">F</span><span>FORMWELL</span></a
+    >
+    <div class="side-label">YOUR SPACE</div>
+    <nav class="side-nav" aria-label="Main navigation">
+      <button class="nav-link active" data-view="dashboard">
+        <span class="nav-glyph">⌂</span>Overview
+      </button>
+      <button class="nav-link" data-view="workouts">
+        <span class="nav-glyph">↗</span>Workouts
+      </button>
+      <button class="nav-link" data-view="stats">
+        <span class="nav-glyph">＋</span>Stats
+      </button>
+      <button class="nav-link" data-view="reports">
+        <span class="nav-glyph">▤</span>Reports
+      </button>
+      <button class="nav-link" data-view="profile">
+        <span class="nav-glyph">○</span>Profile
+      </button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-rule"></div>
+      <div class="side-user">
+        <span class="avatar" id="side-avatar">F</span
+        ><span
+          ><strong id="side-username">Athlete</strong
+          ><small>Member</small></span
+        >
+      </div>
+      <button id="logout-button" class="logout-button">
+        Sign out <span aria-hidden="true">↗</span>
+      </button>
+    </div>
+  </aside>
+
+  <section class="workspace">
+    <header class="topbar">
+      <div>
+        <span class="eyebrow" id="today-label">YOUR TRAINING SPACE</span>
+        <h1 id="page-title">Overview</h1>
+      </div>
+      <div class="topbar-status">
+        <span class="status-dot"></span> All systems ready
+      </div>
+      <button
+        id="chat-open"
+        class="chat-open-button"
+        type="button"
+        title="Open fitness chat"
+      >
+        <span aria-hidden="true">◌</span> Chat
+      </button>
+    </header>
+
+    <div id="view-container"></div>
+    <p id="app-message" class="app-message" role="status"></p>
+  </section>
+</main>
+<div id="chat-container"></div>

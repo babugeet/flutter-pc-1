@@ -1,0 +1,99 @@
+<section id="view-dashboard" class="page-view">
+  <div class="welcome-band">
+    <div>
+      <span class="eyebrow">A LITTLE BETTER, EVERY DAY</span>
+      <h2>Keep showing up<span>.</span></h2>
+      <p>Your progress is built one session at a time.</p>
+    </div>
+    <div class="welcome-stamp" aria-hidden="true">
+      <span>MOVE</span><strong>01</strong><span>RECOVER</span>
+    </div>
+  </div>
+
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">YOUR BASELINE</span>
+      <h2>At a glance</h2>
+    </div>
+    <span class="section-note">PROFILE DATA</span>
+  </div>
+  <div class="metric-grid">
+    <article class="metric metric-lime">
+      <span>AGE</span><strong id="metric-age">--</strong><small>years</small
+      ><i aria-hidden="true">01</i>
+    </article>
+    <article class="metric metric-white">
+      <span>WEIGHT</span><strong id="metric-weight">--</strong
+      ><small>kilograms</small><i aria-hidden="true">02</i>
+    </article>
+    <article class="metric metric-ink">
+      <span>BODY MASS INDEX</span><strong id="metric-bmi">--</strong
+      ><small>current measure</small><i aria-hidden="true">03</i>
+    </article>
+  </div>
+
+  <div class="dashboard-tracking-grid">
+    <article class="content-panel tracking-panel">
+      <div class="panel-heading">
+        <div>
+          <span class="eyebrow">DAILY HYDRATION</span>
+          <h2>Water intake</h2>
+        </div>
+        <span class="tracking-icon" aria-hidden="true">≈</span>
+      </div>
+      <div class="tracking-reading">
+        <strong id="dashboard-water">--</strong
+        ><span id="dashboard-water-goal">Goal: -- L</span>
+      </div>
+      <div class="progress-track">
+        <span id="dashboard-water-progress"></span>
+      </div>
+      <small id="dashboard-water-note" class="tracking-note"
+        >Loading today's entry</small
+      >
+    </article>
+    <article class="content-panel tracking-panel">
+      <div class="panel-heading">
+        <div>
+          <span class="eyebrow">DAILY MOVEMENT</span>
+          <h2>Steps walked</h2>
+        </div>
+        <span class="tracking-icon" aria-hidden="true">↗</span>
+      </div>
+      <div class="tracking-reading">
+        <strong id="dashboard-steps">--</strong
+        ><span id="dashboard-steps-goal">Goal: --</span>
+      </div>
+      <div class="progress-track">
+        <span id="dashboard-steps-progress"></span>
+      </div>
+      <small id="dashboard-steps-note" class="tracking-note"
+        >Loading today's entry</small
+      >
+    </article>
+  </div>
+
+  <article class="content-panel dashboard-workouts">
+    <div class="panel-heading">
+      <div>
+        <span class="eyebrow">TODAY'S TRAINING</span>
+        <h2>Workout progress</h2>
+      </div>
+      <button class="text-button" data-view="stats">Log activity</button>
+    </div>
+    <div id="dashboard-workout-list" class="progress-list">
+      <p class="loading-state">Loading today's workout targets...</p>
+    </div>
+  </article>
+
+  <article class="content-panel dashboard-cta">
+    <div>
+      <span class="eyebrow">READY WHEN YOU ARE</span>
+      <h2>Make a move.</h2>
+      <p>Browse the plan made for your training profile.</p>
+    </div>
+    <button class="button button-lime" data-view="workouts">
+      Browse your plan <span aria-hidden="true">→</span>
+    </button>
+  </article>
+</section>

@@ -1,0 +1,161 @@
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  color: var(--ink);
+  background: var(--lime);
+  font: 700 18px var(--font-display);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 242px minmax(0, 1fr);
+}
+
+.sidebar {
+  min-height: 100vh;
+  padding: 27px 19px 22px;
+  display: flex;
+  flex-direction: column;
+  background: var(--ink);
+  color: #f2f4ee;
+}
+
+.brand {
+  color: #f2f4ee;
+  text-decoration: none;
+}
+
+.side-label {
+  margin: 54px 0 13px 11px;
+  color: #92998f;
+  font: 700 9px var(--font-display);
+  letter-spacing: 0;
+}
+
+.side-nav {
+  display: grid;
+  gap: 5px;
+}
+
+.nav-link {
+  min-height: 43px;
+  padding: 0 11px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  color: #c3c9c0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: #343b32;
+  color: var(--white);
+}
+
+.nav-link.active {
+  box-shadow: inset 3px 0 var(--lime);
+}
+
+.nav-glyph {
+  width: 17px;
+  color: var(--lime);
+  font-size: 17px;
+  text-align: center;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.sidebar-rule {
+  height: 1px;
+  margin-bottom: 17px;
+  background: #42483f;
+}
+
+.side-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.side-user strong,
+.side-user small {
+  display: block;
+}
+
+.side-user strong {
+  max-width: 145px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+
+.side-user small {
+  margin-top: 3px;
+  color: #9da49b;
+  font-size: 10px;
+}
+
+.logout-button {
+  width: 100%;
+  margin-top: 17px;
+  padding: 11px 0 0;
+  display: flex;
+  justify-content: space-between;
+  border: 0;
+  border-top: 1px solid #42483f;
+  background: transparent;
+  color: #c3c9c0;
+  text-align: left;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.workspace {
+  width: min(100%, 1500px);
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 76px) 48px;
+}
+
+.topbar {
+  min-height: 107px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar h1 {
+  margin: 5px 0 0;
+  font: 600 24px var(--font-display);
+  letter-spacing: 0;
+}
+
+.topbar-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #75a82a;
+  box-shadow: 0 0 0 3px #e2edce;
+}
+
+.page-view {
+  animation: reveal 0.3s ease-out both;
+}

@@ -1,0 +1,204 @@
+.filter-row {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.filter-button {
+  min-height: 34px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: transparent;
+  color: #555d52;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.filter-button.active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--white);
+}
+
+.workout-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.workout-card {
+  min-height: 206px;
+  padding: 19px;
+  display: flex;
+  flex-direction: column;
+}
+
+.workout-card[hidden] {
+  display: none;
+}
+
+.workout-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.workout-symbol {
+  font: 500 25px var(--font-display);
+}
+
+.workout-type {
+  font: 700 8px var(--font-display);
+  opacity: 0.65;
+}
+
+.workout-card h3 {
+  margin: 20px 0 5px;
+  font: 600 18px var(--font-display);
+}
+
+.workout-card p {
+  margin: 0 0 15px;
+  color: #5e665d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.workout-meta {
+  margin-top: auto;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(32, 37, 31, 0.17);
+  font: 700 9px var(--font-display);
+}
+
+.workout-card-red {
+  background: #f2c5b9;
+}
+
+.workout-card-blue {
+  background: var(--blue);
+}
+
+.workout-card-green {
+  background: var(--green);
+}
+
+.workout-card-ink {
+  background: #293129;
+  color: var(--white);
+}
+
+.workout-card-ink p {
+  color: #b9c0b6;
+}
+
+.workout-card-ink .workout-meta {
+  border-color: #51594f;
+}
+
+.workout-card-white {
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.workout-card-yellow {
+  background: var(--yellow);
+}
+
+.plan-goal-grid {
+  margin-bottom: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.plan-goal {
+  min-height: 100px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.plan-goal span {
+  font: 700 9px var(--font-display);
+}
+
+.plan-goal strong {
+  margin-top: 9px;
+  font: 600 25px/1 var(--font-display);
+}
+
+.plan-goal small {
+  margin-top: 4px;
+  color: #50594e;
+  font-size: 10px;
+}
+
+.plan-goal-water {
+  background: var(--blue);
+}
+
+.plan-goal-steps {
+  background: var(--lime);
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 12px;
+}
+
+.plan-panel {
+  min-width: 0;
+}
+
+.diet-plan-panel {
+  grid-column: 1 / -1;
+}
+
+.plan-list,
+.diet-list {
+  display: grid;
+}
+
+.plan-item,
+.diet-item {
+  min-height: 48px;
+  padding: 11px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border-top: 1px solid #edf0e9;
+}
+
+.plan-item strong,
+.diet-item strong {
+  font-size: 11px;
+}
+
+.plan-item small,
+.diet-item small {
+  color: var(--muted);
+  font-size: 10px;
+  text-align: right;
+}
+
+.diet-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 16px;
+}
+
+.diet-item {
+  min-height: 70px;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}

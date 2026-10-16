@@ -1,0 +1,76 @@
+<section id="view-stats" class="page-view">
+  <div class="page-intro">
+    <span class="eyebrow">TODAY'S ACTIVITY</span>
+    <h2>Log your progress.</h2>
+    <p>Keep your daily measures and training counts up to date.</p>
+  </div>
+
+  <form id="daily-input-form" class="content-panel stats-daily-form">
+    <div class="panel-heading">
+      <div>
+        <span class="eyebrow">DAILY METRICS</span>
+        <h2>Water and steps</h2>
+      </div>
+      <span class="panel-tag" id="stats-date-label"></span>
+    </div>
+    <div class="stats-fields stats-fields-two">
+      <label
+        >Water intake <span class="field-unit">liters</span
+        ><input
+          name="water"
+          type="number"
+          min="0"
+          step="0.1"
+          inputmode="decimal"
+          required
+      /></label>
+      <label
+        >Steps walked <span class="field-unit">steps</span
+        ><input
+          name="steps"
+          type="number"
+          min="0"
+          step="1"
+          inputmode="numeric"
+          required
+      /></label>
+    </div>
+    <p id="daily-input-message" class="form-message" role="status"></p>
+    <button class="button button-dark" type="submit">
+      Save daily metrics <span aria-hidden="true">→</span>
+    </button>
+  </form>
+
+  <div class="stats-exercise-grid">
+    <form id="cardio-form" class="content-panel stats-exercise-form">
+      <div class="panel-heading">
+        <div>
+          <span class="eyebrow">ENDURANCE</span>
+          <h2>Cardio progress</h2>
+        </div>
+      </div>
+      <div id="cardio-fields" class="exercise-fields">
+        <p class="loading-state">Loading your cardio targets...</p>
+      </div>
+      <p id="cardio-message" class="form-message" role="status"></p>
+      <button class="button button-dark" type="submit">
+        Save cardio progress <span aria-hidden="true">→</span>
+      </button>
+    </form>
+    <form id="strength-form" class="content-panel stats-exercise-form">
+      <div class="panel-heading">
+        <div>
+          <span class="eyebrow">STRENGTH</span>
+          <h2>Strength progress</h2>
+        </div>
+      </div>
+      <div id="strength-fields" class="exercise-fields">
+        <p class="loading-state">Loading your strength targets...</p>
+      </div>
+      <p id="strength-message" class="form-message" role="status"></p>
+      <button class="button button-dark" type="submit">
+        Save strength progress <span aria-hidden="true">→</span>
+      </button>
+    </form>
+  </div>
+</section>

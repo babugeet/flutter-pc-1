@@ -1,0 +1,112 @@
+<main id="auth-screen" class="auth-screen">
+  <section class="auth-visual" aria-label="Fitness training">
+    <div class="visual-top">
+      <span class="brand-mark">F</span><span>FORMWELL</span>
+    </div>
+    <div class="visual-copy">
+      <span class="eyebrow">TRAIN WITH INTENTION</span>
+      <h1>Make your<br />strength<br /><em>add up.</em></h1>
+      <p>A clearer view of the work you put in.</p>
+    </div>
+    <span class="visual-index">01 / YOUR DAILY PRACTICE</span>
+  </section>
+  <section class="auth-panel">
+    <div class="auth-mobile-brand">
+      <span class="brand-mark">F</span> FORMWell
+    </div>
+    <div class="auth-form-wrap">
+      <div id="login-panel">
+        <span class="eyebrow">WELCOME BACK</span>
+        <h2>Good to see you.</h2>
+        <p class="muted">Sign in to pick up where you left off.</p>
+        <form id="login-form" class="form-stack">
+          <label
+            >Username<input name="username" autocomplete="username" required
+          /></label>
+          <label
+            >Password<input
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+          /></label>
+          <p id="login-message" class="form-message" role="status"></p>
+          <button class="button button-dark" type="submit">
+            Sign in <span aria-hidden="true">→</span>
+          </button>
+        </form>
+        <p class="switch-auth">
+          New to Formwell?
+          <button class="text-button" data-auth="signup">
+            Create an account
+          </button>
+        </p>
+      </div>
+
+      <div id="signup-panel" hidden>
+        <span class="eyebrow">START HERE</span>
+        <h2>Build your baseline.</h2>
+        <p class="muted">A few details make your plan yours.</p>
+        <form id="signup-form" class="form-stack signup-grid">
+          <label
+            >First name<input
+              name="firstname"
+              autocomplete="given-name"
+              required
+          /></label>
+          <label
+            >Last name<input
+              name="lastname"
+              autocomplete="family-name"
+              required
+          /></label>
+          <label
+            >Username<input name="username" autocomplete="username" required
+          /></label>
+          <label
+            >Age<input name="age" type="number" min="1" max="120" required
+          /></label>
+          <label
+            >Gender<input name="gender" autocomplete="sex" required
+          /></label>
+          <label
+            >Height (cm)<input name="height" type="number" min="1" required
+          /></label>
+          <label
+            >Weight (kg)<input name="weight" type="number" min="1" required
+          /></label>
+          <label
+            >BMI<input name="bmi" type="number" step="0.01" readonly
+          /></label>
+          <label class="span-two"
+            >Password<input
+              name="password"
+              type="password"
+              autocomplete="new-password"
+              required
+          /></label>
+          <label class="span-two"
+            >Confirm password<input
+              name="confirmPassword"
+              type="password"
+              autocomplete="new-password"
+              required
+          /></label>
+          <p
+            id="signup-message"
+            class="form-message span-two"
+            role="status"
+          ></p>
+          <button class="button button-dark span-two" type="submit">
+            Create account <span aria-hidden="true">→</span>
+          </button>
+        </form>
+        <p class="switch-auth">
+          Already have an account?
+          <button class="text-button" data-auth="login">Sign in</button>
+        </p>
+      </div>
+    </div>
+    <span class="auth-footer">YOUR PACE. YOUR PROGRESS.</span>
+  </section>
+</main>

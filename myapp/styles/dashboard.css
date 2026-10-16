@@ -1,0 +1,255 @@
+.welcome-band {
+  min-height: 205px;
+  margin-top: 29px;
+  padding: 30px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--white);
+}
+
+.welcome-band .eyebrow {
+  color: #b5bead;
+}
+
+.welcome-band h2 {
+  margin: 11px 0 7px;
+  font: 600 32px var(--font-display);
+  letter-spacing: 0;
+}
+
+.welcome-band h2 span {
+  color: var(--lime);
+}
+
+.welcome-band p {
+  margin: 0;
+  color: #b5bead;
+  font-size: 12px;
+}
+
+.welcome-stamp {
+  width: 120px;
+  height: 120px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transform: rotate(9deg);
+  border: 1px solid #677059;
+  border-radius: 50%;
+  color: var(--lime);
+}
+
+.welcome-stamp strong {
+  font: 600 43px/0.95 var(--font-display);
+}
+
+.welcome-stamp span {
+  font: 700 8px var(--font-display);
+}
+
+.section-heading,
+.panel-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.section-heading {
+  margin: 35px 0 14px;
+}
+
+.section-heading h2,
+.panel-heading h2 {
+  margin: 4px 0 0;
+  font: 600 19px var(--font-display);
+  letter-spacing: 0;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.metric {
+  min-height: 139px;
+  padding: 19px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.metric > span {
+  font: 700 9px var(--font-display);
+}
+
+.metric strong {
+  margin-top: 14px;
+  font: 600 32px/0.95 var(--font-display);
+}
+
+.metric small {
+  margin-top: 6px;
+  opacity: 0.72;
+  font-size: 10px;
+}
+
+.metric i {
+  position: absolute;
+  right: 17px;
+  bottom: 12px;
+  opacity: 0.16;
+  font: 600 26px var(--font-display);
+  font-style: normal;
+}
+
+.metric-lime {
+  background: var(--lime);
+}
+
+.metric-white {
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.metric-ink {
+  background: #d7e1d5;
+}
+
+.dashboard-lower {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 12px;
+}
+
+.activity-chart {
+  height: 142px;
+  padding-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: end;
+  gap: 12px;
+}
+
+.chart-column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 8px;
+}
+
+.chart-column span {
+  width: min(28px, 75%);
+  height: var(--bar);
+  min-height: 6px;
+  display: block;
+  background: var(--lime-deep);
+}
+
+.chart-column:nth-child(2n) span {
+  background: #b9d2ec;
+}
+
+.chart-column small {
+  color: var(--muted);
+  font: 700 8px var(--font-display);
+}
+
+.workout-summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.workout-summary p {
+  margin: 16px 0 20px;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 12px;
+}
+
+.workout-summary .button {
+  margin-top: auto;
+}
+
+.summary-arrow {
+  color: var(--lime-deep);
+  font-size: 22px;
+}
+
+.dashboard-tracking-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.tracking-panel {
+  min-width: 0;
+}
+
+.tracking-icon {
+  color: var(--lime-deep);
+  font: 500 22px var(--font-display);
+}
+
+.tracking-reading {
+  margin: 19px 0 11px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.tracking-reading strong {
+  font: 600 27px/1 var(--font-display);
+}
+
+.tracking-reading span,
+.tracking-note {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.tracking-panel .progress-track {
+  margin-bottom: 9px;
+}
+
+.dashboard-workouts {
+  margin-top: 14px;
+}
+
+.dashboard-cta {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--ink);
+  color: var(--white);
+}
+
+.dashboard-cta .eyebrow {
+  color: #b5bead;
+}
+
+.dashboard-cta h2 {
+  margin: 5px 0;
+  font: 600 19px var(--font-display);
+}
+
+.dashboard-cta p {
+  margin: 0;
+  color: #b5bead;
+  font-size: 11px;
+}

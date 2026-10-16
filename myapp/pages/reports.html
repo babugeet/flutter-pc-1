@@ -1,0 +1,39 @@
+<section id="view-reports" class="page-view">
+  <div class="page-intro report-intro">
+    <div>
+      <span class="eyebrow">YOUR HISTORY</span>
+      <h2>Progress report.</h2>
+      <p>Review training and daily metrics by date.</p>
+    </div>
+    <label class="report-date-field"
+      >REPORT DATE<input id="report-date" type="date"
+    /></label>
+  </div>
+
+  <div class="report-metric-grid">
+    <article class="report-metric report-water">
+      <span>WATER INTAKE</span><strong id="report-water-value">--</strong
+      ><small id="report-water-target">liters logged</small>
+      <div class="report-track"><span id="report-water-bar"></span></div>
+    </article>
+    <article class="report-metric report-steps">
+      <span>STEPS WALKED</span><strong id="report-steps-value">--</strong
+      ><small id="report-steps-target">steps logged</small>
+      <div class="report-track"><span id="report-steps-bar"></span></div>
+    </article>
+  </div>
+
+  <article class="content-panel report-workouts">
+    <div class="panel-heading">
+      <div>
+        <span class="eyebrow">SELECTED DAY</span>
+        <h2>Workout progress</h2>
+      </div>
+      <span id="report-workout-count" class="panel-tag"></span>
+    </div>
+    <div id="report-workout-list" class="report-progress-list">
+      <p class="loading-state">Choose a date to load your report.</p>
+    </div>
+  </article>
+  <p id="report-message" class="app-message" role="status"></p>
+</section>

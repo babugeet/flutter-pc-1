@@ -1,0 +1,162 @@
+.auth-screen {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.95fr) minmax(430px, 1.05fr);
+}
+
+.auth-visual {
+  min-height: 100vh;
+  padding: 34px 7.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--white);
+  background:
+    linear-gradient(180deg, rgba(18, 24, 21, 0.35), rgba(18, 24, 21, 0.76)),
+    url("assets/download.jpeg") center / cover;
+}
+
+.visual-top,
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font: 700 13px var(--font-display);
+  letter-spacing: 0;
+}
+
+.visual-copy {
+  max-width: 410px;
+  padding: 50px 0;
+}
+
+.visual-copy h1 {
+  margin: 15px 0;
+  font: 600 clamp(42px, 5vw, 70px)/0.99 var(--font-display);
+  letter-spacing: 0;
+}
+
+.visual-copy h1 em {
+  color: var(--lime);
+  font-style: normal;
+}
+
+.visual-copy p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+}
+
+.auth-visual .eyebrow,
+.visual-index {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.visual-index,
+.auth-footer {
+  font: 700 9px var(--font-display);
+  letter-spacing: 0;
+}
+
+.auth-panel {
+  min-height: 100vh;
+  padding: 28px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: var(--paper);
+}
+
+.auth-form-wrap {
+  width: min(100%, 440px);
+  margin: auto;
+  padding: 52px 0;
+}
+
+.auth-form-wrap h2 {
+  margin: 10px 0 6px;
+  font: 600 36px/1.12 var(--font-display);
+  letter-spacing: 0;
+}
+
+.form-stack {
+  display: grid;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.form-stack label {
+  display: grid;
+  gap: 7px;
+  color: #41473f;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-stack input {
+  width: 100%;
+  min-height: 45px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0 12px;
+  outline: none;
+  background: #fff;
+  color: var(--ink);
+}
+
+.form-stack input:focus {
+  border-color: #76952a;
+  box-shadow: 0 0 0 3px rgba(168, 207, 36, 0.18);
+}
+
+.form-stack input[readonly] {
+  background: #edf0e9;
+}
+
+.switch-auth {
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.text-button {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.form-message {
+  min-height: 18px;
+  margin: -4px 0 0;
+  color: #a64234;
+  font-size: 12px;
+}
+
+.form-message.success {
+  color: #477516;
+}
+
+.signup-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.span-two {
+  grid-column: 1 / -1;
+}
+
+.auth-footer {
+  position: absolute;
+  right: 8%;
+  bottom: 30px;
+  color: #8a9087;
+}
+
+.auth-mobile-brand {
+  display: none;
+}

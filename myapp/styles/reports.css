@@ -1,0 +1,140 @@
+.report-intro {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.report-date-field {
+  min-width: 190px;
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font: 700 9px var(--font-display);
+}
+
+.report-date-field input {
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0 10px;
+  background: var(--white);
+  color: var(--ink);
+  font: 500 12px var(--font-body);
+}
+
+.report-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.report-metric {
+  min-height: 152px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.report-metric > span {
+  font: 700 9px var(--font-display);
+}
+
+.report-metric strong {
+  margin-top: 13px;
+  font: 600 31px/1 var(--font-display);
+}
+
+.report-metric small {
+  margin-top: 5px;
+  color: #50594e;
+  font-size: 10px;
+}
+
+.report-water {
+  background: var(--blue);
+}
+
+.report-steps {
+  background: var(--lime);
+}
+
+.report-track,
+.progress-track {
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  background: rgba(32, 37, 31, 0.13);
+}
+
+.report-track {
+  margin-top: auto;
+}
+
+.report-track span,
+.progress-track span {
+  height: 100%;
+  display: block;
+  background: var(--ink);
+  transition: width 0.25s ease;
+}
+
+.report-workouts {
+  margin-top: 14px;
+}
+
+.report-progress-list,
+.progress-list {
+  display: grid;
+  gap: 11px;
+}
+
+.report-progress-item,
+.progress-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 7px 14px;
+  align-items: center;
+  padding: 11px 0;
+  border-top: 1px solid #edf0e9;
+}
+
+.report-progress-item strong,
+.progress-item strong {
+  font-size: 11px;
+}
+
+.report-progress-item small,
+.progress-item small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.report-progress-item .progress-track,
+.progress-item .progress-track {
+  grid-column: 1 / -1;
+}
+
+.report-progress-item .progress-value,
+.progress-item .progress-value {
+  color: var(--muted);
+  font-size: 10px;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .report-intro {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .report-date-field {
+    width: 100%;
+  }
+
+  .report-metric-grid {
+    grid-template-columns: 1fr;
+  }
+}
